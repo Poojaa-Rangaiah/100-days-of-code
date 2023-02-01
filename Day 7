@@ -1,0 +1,25 @@
+//Write a program to find Number of days in a given month of a given year.
+#include <iostream>
+using namespace std;
+int main () {
+    int x;
+    unsigned int y;
+    cout<<"Enter month : ";
+    cin>>x;
+    cout<<"Enter Year : ";
+    cin>>y;
+    cout<<"The number of days in a given month of a given year : ";
+    if (x == 1 || x == 3 || x == 5 || x == 7 || x == 8 || x == 10 || x == 12)
+    cout<<31;
+    else if (x == 4 || x == 6 || x == 9 || x == 11)
+    cout<<30;
+    else if (x == 2) {
+        if (y % 4 == 0)
+        cout<<29;
+        else
+        cout<<28;
+    }
+    else
+    cout<<"Invalid month";
+    return 0;
+}
