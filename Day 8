@@ -1,0 +1,26 @@
+//Write a program to find roots of a quadratic equation.
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main () {
+    double a, b, c, d;
+    double x1, x2;
+    cout<<"Enter the coefficiants of quadratic quation :";
+    cin>>a>>b>>c;
+    d = (b*b - 4*a*c);
+    if (d > 0) {
+        x1 = (-b + sqrt(d) )/(2*a);
+        x2 = (-b - sqrt(d) )/(2*a);
+        cout<<"The roots are Real\nRoot1 = "<<x1<<" ; Root2 = "<<x2;
+    }
+    else if (d == 0) {
+        x1 = x2 = -b/(2*a);
+        cout<<"The roots are Real and Equal\nRoot1 = Root2 = "<<x1;
+    }
+    else {
+        x1 = -b/2*a;
+        x2 = sqrt(-d)/(2*a);
+        cout<<"The roots are Real and Imaginary\n Root1 = "<<x1<<" + ("<<x2<<")"<<" ; Root2 = "<<x1<<" - ("<<x2<<")";
+    }
+    return 0;
+}
