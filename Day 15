@@ -1,0 +1,33 @@
+//Write a program to identify if the number is Strong number or not.
+#include <iostream>
+using namespace std;
+int fact(int num) {
+  int sum = 0;
+  if (num == 1)
+    return 1;
+  else
+    return num * fact(num - 1);
+}
+
+int main() {
+  int n, sum = 0, rem, factorial = 1, tem;
+  cout<<"Enter a number : ";
+  cin>>n;
+  tem = n;
+  if (n == 0) {
+    sum = sum + factorial;
+  } 
+  else {
+    while(tem > 0) {
+    rem = tem % 10;
+    factorial = fact(rem);
+    sum = sum + factorial;
+    tem = tem/10;
+    }
+  }
+  if (sum == n)
+    cout<<n<<" is a strong number";
+  else 
+    cout<<n<<" is not a strong number";
+  return 0;
+}
