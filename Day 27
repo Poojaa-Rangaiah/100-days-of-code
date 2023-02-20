@@ -1,0 +1,12 @@
+//write a program to calculate double of number without using arithmetic operator
+
+#include <iostream.h>
+
+int main() {
+  int N,a;
+  cout<<"Enter a num: ";
+  cin>>N;
+  a = N<<1;
+  cout<<a;
+  return 0;
+}
