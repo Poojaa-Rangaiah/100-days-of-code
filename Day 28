@@ -1,0 +1,19 @@
+//Program to reverse a String
+#include <iostream.h>
+#include <string.h>
+
+using namespacse std;
+
+int main() {
+ char a[50] = {0};
+ char b[50] = {0};
+ int n;
+ cout<<"Enter a string = ";
+ fgets(a,n,stdin);
+ n = strlen(a)-1;
+ for(int i = 0; i <= n; i++) {
+  b[i] = a[n - i];
+ }
+ cout<<"Reversed string = "<<b;
+ return 0;
+}
